@@ -62,7 +62,7 @@ const startServer = async () => {
   try {
     await testConnection();
     // Sync database (alter: true updates tables without dropping them)
-    await sequelize.sync({ alter: true });
+   await sequelize.sync()
     console.log('Database synced successfully');
 
     app.listen(PORT, () => {
